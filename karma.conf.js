@@ -33,19 +33,16 @@ module.exports = function(config) {
       'karma-chrome-launcher',
       'karma-script-launcher',
       'karma-junit-reporter',
-      '../../../karma-parser-generator',
       '../../../karma-parser-getter-setter'
     ],
 
     customLaunchers: {
-      Dartium: { base: 'ChromeCanary', flags: ['--no-sandbox'] },
-      ChromeNoSandbox: { base: 'Chrome', flags: ['--no-sandbox'] }
+      Dartium: { base: 'ChromeCanary' }
     },
 
     browsers: ['Dartium'],
 
     preprocessors: {
-      'test/core/parser/generated_functions.dart': ['parser-generator'],
       'test/core/parser/generated_getter_setter.dart': ['parser-getter-setter']
     },
 
